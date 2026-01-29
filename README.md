@@ -9,6 +9,6 @@ This is for praticing Git anfd github with networking devices for CML2 and GNS3
 
 - Router Config.
 - Switch Config
-- Network automation
+- - **NEW: Network automation with Python**
 - Toplogy files
 - 
