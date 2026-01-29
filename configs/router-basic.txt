@@ -1,0 +1,16 @@
+! Basic Cisco Router Configuration
+hostname LAB-ROUTER-1
+!
+interface GigabitEthernet0/0
+ description Connection to Core
+ ip address 10.0.0.1 255.255.255.0
+ no shutdown
+!
+router ospf 10
+ network 10.0.0.0 0.0.0.255 area 0
+!
+line console 0
+ logging synchronous
+ login local
+!
+end
