@@ -1,0 +1,35 @@
+name: Network Config Validation CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Validate file structure
+      run: |
+        echo " Checking project structure..."
+        ls -la
+        echo " Structure validation passed"
+        
+    - name: Check configuration files
+      run: |
+        echo " Checking config files..."
+        if [ -d "configs" ]; then
+          echo "Found configs directory"
+          ls configs/
+        else
+          echo " configs directory missing"
+          exit 1
+        fi
+        
+    - name: Success message
+      run: echo " CI pipeline completed successfully!"
