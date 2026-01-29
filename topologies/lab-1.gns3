@@ -1,0 +1,10 @@
+{
+  "name": "Basic Lab 1",
+  "description": "Simple router and switch setup",
+  "version": 2,
+  "topology": {
+    "routers": 2,
+    "switches": 1,
+    "computers": 2
+  }
+}
